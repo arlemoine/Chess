@@ -168,11 +168,7 @@ cython_debug/
 #.idea/
 
 # PyPI configuration file
-<<<<<<< HEAD
 .pypirc
 
 # Visual Studio Code
 tempCodeRunnerFile.py
-=======
-.pypirc
->>>>>>> origin/main
