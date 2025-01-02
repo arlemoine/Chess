@@ -3,6 +3,8 @@ class ChessPiece:
     Represents a single chess piece.
     """
 
-    team = "black"
-    location = "here"
+    def __init__(self, color):
+        self.color = color
+        self.location = ()
+    #
 #

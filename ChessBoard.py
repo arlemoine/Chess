@@ -1,4 +1,5 @@
-import ChessPiece
+from PawnPiece import PawnPiece
+from BishopPiece import BishopPiece
 
 class ChessBoard:
     """
@@ -10,24 +11,29 @@ class ChessBoard:
         self.gameOver = False
         self.winner = None
 
-        # Place Rooks
-        self.gameGrid[0][0] = self.gameGrid[0][7] = self.gameGrid[7][0] = self.gameGrid[7][7] = "R"
+        # # Place Rooks
+        # self.gameGrid[0][0] = self.gameGrid[0][7] = self.gameGrid[7][0] = self.gameGrid[7][7] = "R"
 
-        # Place Knights
-        self.gameGrid[0][1] = self.gameGrid[0][6] = self.gameGrid[7][1] = self.gameGrid[7][6] = "H"
+        # # Place Knights
+        # self.gameGrid[0][1] = self.gameGrid[0][6] = self.gameGrid[7][1] = self.gameGrid[7][6] = "H"
 
-        # Place Bishops
-        self.gameGrid[0][2] = self.gameGrid[0][5] = self.gameGrid[7][2] = self.gameGrid[7][5] = "B"
+        # # Place Bishops
+        # self.gameGrid[0][2] = self.gameGrid[0][5] = self.gameGrid[7][2] = self.gameGrid[7][5] = "B"
 
-        # Place Queen
-        self.gameGrid[0][3] = self.gameGrid[7][3] = "Q"
+        # # Place Queen
+        # self.gameGrid[0][3] = self.gameGrid[7][3] = "Q"
 
-        # Place King
-        self.gameGrid[0][4] = self.gameGrid[7][4] = "K"
+        # # Place King
+        # self.gameGrid[0][4] = self.gameGrid[7][4] = "K"
 
-        # Place Pawns
-        self.gameGrid[1] = ["P"] * 8
-        self.gameGrid[6] = ["P"] * 8
+        # # Place Pawns
+        # self.gameGrid[1] = ["P"] * 8
+        # self.gameGrid[6] = ["P"] * 8
+
+        # TEST PIECES
+        self.gameGrid[1][7] = BishopPiece("White")
+        self.gameGrid[1][6] = BishopPiece("White")
+        self.gameGrid[3][7] = BishopPiece("White")
 
         self.printBoard()
     #
@@ -40,7 +46,10 @@ class ChessBoard:
         for row in range(8):
             print(row + 1, end="\t")
             for col in self.gameGrid[row]:
-                print(col, end="\t")
+                if col == None:
+                    print(col, end="\t")
+                else:
+                    print(col.pieceType, end="\t")
             #
             print()
         #
@@ -89,7 +98,8 @@ class ChessBoard:
 if __name__ == "__main__":
 
     board = ChessBoard()
-    board.play()
+    # board.play()
+    board.gameGrid[1][7].getValidPaths((1,7),board.gameGrid)
     
     
 #
