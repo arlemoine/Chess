@@ -107,7 +107,11 @@ class KnightPiece(ChessPiece):
             #
         #
 
+<<<<<<< HEAD
         # print(validPaths) # FOR TESTING
+=======
+        print(validPaths)
+>>>>>>> origin/main
     #
 #
 
