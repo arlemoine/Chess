@@ -29,6 +29,7 @@ class BishopPiece(ChessPiece):
                 break
             #
         #
+
         # Move right
         tempCol = col
         while tempCol < 7:
@@ -42,6 +43,7 @@ class BishopPiece(ChessPiece):
                 break
             #
         #
+
         # Move up
         while tempRow > 0:
             tempRow = tempRow - 1
@@ -54,6 +56,7 @@ class BishopPiece(ChessPiece):
                 break
             #
         #
+        
         # Move down
         tempRow = row
         while tempRow < 7:
