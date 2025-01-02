@@ -2,6 +2,7 @@ from PawnPiece import PawnPiece
 from BishopPiece import BishopPiece
 from RookPiece import RookPiece
 from KnightPiece import KnightPiece
+from KingPiece import KingPiece
 
 class ChessBoard:
     """
@@ -33,9 +34,9 @@ class ChessBoard:
         # self.gameGrid[6] = ["P"] * 8
 
         # TEST PIECES
-        self.gameGrid[2][1] = KnightPiece("White")
-        self.gameGrid[3][3] = RookPiece("Black")
-        self.gameGrid[3][7] = RookPiece("White")
+        self.gameGrid[1][1] = KingPiece("White")
+        self.gameGrid[2][5] = RookPiece("Black")
+        self.gameGrid[0][0] = RookPiece("Black")
 
         self.printBoard()
     #
@@ -101,7 +102,7 @@ if __name__ == "__main__":
 
     board = ChessBoard()
     # board.play()
-    board.gameGrid[2][1].getValidPaths((2,1),board.gameGrid)
+    board.gameGrid[1][1].getValidPaths((1,1),board.gameGrid)
     
     
 #
