@@ -80,6 +80,7 @@ class KingPiece(ChessPiece):
             validPaths.append((tempRow, tempCol))
         #
 
+        return validPaths
         # print(validPaths) # FOR TESTING
     #
 #

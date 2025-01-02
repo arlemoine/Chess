@@ -135,7 +135,8 @@ class QueenPiece(ChessPiece):
             #
         #
 
-        print(sorted(validPaths))
+        return validPaths
+        # print(sorted(validPaths)) FOR TESTING
     #
 #
 

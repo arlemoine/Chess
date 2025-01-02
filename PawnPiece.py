@@ -34,7 +34,6 @@ class PawnPiece(ChessPiece):
         tempRow = row + self.linearAdvancement
         # Diagonal left
         tempCol = col - 1
-        print(f"tempCol = {tempCol}")
         if tempCol > -1 and tempCol < 8:
             if gameGrid[tempRow][tempCol] != None:
                 if gameGrid[tempRow][tempCol].color != self.color:
@@ -44,7 +43,6 @@ class PawnPiece(ChessPiece):
         #
         # Diagonal right
         tempCol = tempCol + 2
-        print(f"tempCol = {tempCol}")
         if tempCol > -1 and tempCol < 8:
             if gameGrid[tempRow][tempCol] != None:
                 if gameGrid[tempRow][tempCol].color != self.color:             
@@ -61,6 +59,8 @@ class PawnPiece(ChessPiece):
                 validPaths.append((tempRow + self.linearAdvancement, col))
             #
         #
+
+        return validPaths
 
         # print(validPaths) # FOR TESTING PURPOSES
     #

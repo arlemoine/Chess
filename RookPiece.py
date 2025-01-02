@@ -79,6 +79,7 @@ class RookPiece(ChessPiece):
             #
         #
 
+        return validPaths
         # print(validPaths) # FOR TESTING
     #
 #

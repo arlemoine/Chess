@@ -107,6 +107,7 @@ class KnightPiece(ChessPiece):
             #
         #
 
+        return validPaths
         # print(validPaths) # FOR TESTING
     #
 #
