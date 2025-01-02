@@ -3,6 +3,7 @@ from BishopPiece import BishopPiece
 from RookPiece import RookPiece
 from KnightPiece import KnightPiece
 from KingPiece import KingPiece
+from QueenPiece import QueenPiece
 
 class ChessBoard:
     """
@@ -34,9 +35,9 @@ class ChessBoard:
         # self.gameGrid[6] = ["P"] * 8
 
         # TEST PIECES
-        self.gameGrid[1][1] = KingPiece("White")
-        self.gameGrid[2][5] = RookPiece("Black")
-        self.gameGrid[0][0] = RookPiece("Black")
+        self.gameGrid[1][1] = QueenPiece("White")
+        self.gameGrid[1][4] = RookPiece("Black")
+        self.gameGrid[0][0] = RookPiece("White")
 
         self.printBoard()
     #

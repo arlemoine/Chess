@@ -30,6 +30,7 @@ class RookPiece(ChessPiece):
                 break
             #
         #
+        
         # Move up and right diagonally
         tempRow = row
         tempCol = col
@@ -45,6 +46,7 @@ class RookPiece(ChessPiece):
                 break
             #
         #
+
         # Move down and left diagonally
         tempRow = row
         tempCol = col
@@ -60,6 +62,7 @@ class RookPiece(ChessPiece):
                 break
             #
         #
+
         # Move down and right diagonally
         tempRow = row
         tempCol = col
