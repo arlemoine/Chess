@@ -68,7 +68,7 @@ class BishopPiece(ChessPiece):
             #
         #
 
-        print(validPaths)
+        # print(validPaths) # FOR TESTING
     #
 #
 
